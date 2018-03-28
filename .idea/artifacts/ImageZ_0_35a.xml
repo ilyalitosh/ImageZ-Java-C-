@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ImageZ_0.35a">
+    <output-path>$PROJECT_DIR$/out/artifacts/ImageZ_0_35a</output-path>
+    <root id="archive" name="ImageZ_0.35a.jar">
+      <element id="module-output" name="NativeImageZ" />
+    </root>
+  </artifact>
+</component>
