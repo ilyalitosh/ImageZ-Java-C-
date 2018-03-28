@@ -101,7 +101,7 @@ public final class IZProc{
     // С++ нахождение объектов на изображении(метод связных образов)
     private static native int[] findObjects_0(int[] image, int width, int height);
 
-    // С++ адаптивная обрезка изображения
+    // C++ адаптивная обрезка изображения
     private static native void adaptiveClip_0(int[] image_0, int[] image_1, int width, int height, int depth);
 
 }
