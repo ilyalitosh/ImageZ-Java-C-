@@ -80,6 +80,20 @@ public final class IZProc{
         adaptiveClip_0(imageSrc.getMatrix(), imageDest.getMatrix(), imageSrc.getWidth(), imageSrc.getHeight(), depth);
     }
 
+    public static IZMatrix scale(IZMatrix imageSrc, double ratioX, double ratioY, int scalingMode){
+        switch (scalingMode){
+            case IZType.SCALING_NEAREST_NEIGHBOR:
+                IZMatrix scaledImage = new IZMatrix(new IZSize((int)(imageSrc.getWidth() * ratioX),
+                                                                (int)(imageSrc.getHeight() * ratioY)));
+                scale_0(imageSrc.getMatrix(), scaledImage.getMatrix(),
+                        imageSrc.getWidth(), imageSrc.getHeight(),
+                        scaledImage.getWidth(), scaledImage.getHeight(),
+                        ratioX, ratioY);
+                return scaledImage;
+        }
+        throw new IZParameterException("Такого типа масштабирования нет");
+    }
+
     // C++: бинаризация Брэдли-Рота
     private static native void binarize_0(int[] image_0, int[] image_1, int width, int height, double d, double t);
 
@@ -103,5 +117,8 @@ public final class IZProc{
 
     // C++ адаптивная обрезка изображения
     private static native void adaptiveClip_0(int[] image_0, int[] image_1, int width, int height, int depth);
+
+    // C++ масштабирование изображения(метод ближайшего соседа)
+    private static native void scale_0(int[] image_0, int[] image_1, int width_0, int height_0, int width_1, int height_1, double ratioX, double ratioY);
 
 }

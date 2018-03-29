@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         System.loadLibrary(ImageZ.LIBRARY_NAME);
-        BufferedImage bImage = new BufferedImage(900, 300, BufferedImage.TYPE_BYTE_GRAY);
-        Graphics g = bImage.getGraphics();
 
         BufferedImage fileImage = ImageIO.read(new FileInputStream("D:/JavaProject(intelegenciya)/NativeImageZ/test/2_1.png"));
+        BufferedImage bImage = new BufferedImage(fileImage.getWidth(), fileImage.getHeight(), BufferedImage.TYPE_BYTE_GRAY);
+        Graphics g = bImage.getGraphics();
         Graphics g1 = fileImage.getGraphics();
         g.drawImage(fileImage, 0, 0, null);
 
@@ -23,8 +23,11 @@ public class Main {
 
         IZMatrix imageBinarized = new IZMatrix(new IZSize(imageSrc.getWidth(), imageSrc.getHeight()));
         IZProc.binarize(imageSrc, imageBinarized, IZBinarizationModes.IZ_BRADLEY_ROT, 10,0.05,0,0);
-
-        IZMatrix imageAfterFilter = new IZMatrix(new IZSize(imageBinarized.getWidth(), imageBinarized.getHeight()));
+        long start1 = System.currentTimeMillis();
+        IZMatrix scaledImage = IZProc.scale(imageBinarized, 2.5, 1.1, IZType.SCALING_NEAREST_NEIGHBOR);
+        long end1 = System.currentTimeMillis();
+        System.out.println("Скэйлинг: " + ((end1-start1+0.0)/1000) + " сек. ");
+        /*IZMatrix imageAfterFilter = new IZMatrix(new IZSize(imageBinarized.getWidth(), imageBinarized.getHeight()));
 
         //BufferedImage test2;
         //for(int i = 0; i < 60; i++){
@@ -37,7 +40,7 @@ public class Main {
 
 
         IZMatrix imageAfterDilation = new IZMatrix(new IZSize(imageAfterFilter.getWidth(), imageAfterFilter.getHeight()));
-        IZProc.morphology(imageAfterFilter, imageAfterDilation, IZMorphologyModes.DILATION, new IZSize(7,27));
+        IZProc.morphology(imageAfterFilter, imageAfterDilation, IZMorphologyModes.DILATION, new IZSize(7,27));*/
 
 
         /*IZImageObjects objects = IZProc.findObjects(imageAfterDilation);
@@ -58,19 +61,18 @@ public class Main {
         //System.out.println("Кусок обработки: " + ((end1-start1+0.0)/1000) + " сек. " + object1.getX() + " " + object1.getY() + " " + object1.getWidth() + " " + object1.getHeight());
 
 
-        //IZMatrix imageAfterErosion = new IZMatrix(new IZSize(imageAfterFilter.getWidth(), imageAfterFilter.getHeight()));
+        /*//IZMatrix imageAfterErosion = new IZMatrix(new IZSize(imageAfterFilter.getWidth(), imageAfterFilter.getHeight()));
         //IZProc.morphology(imageAfterFilter, imageAfterErosion, IZMorphologyModes.EROSION, new IZSize(3,14));
         IZMatrix clipedImage = new IZMatrix(new IZSize(imageAfterDilation.getWidth(), imageAfterDilation.getHeight()));
-        long start1 = System.currentTimeMillis();
-        IZProc.adaptiveClip(imageAfterDilation, clipedImage, 70);
-        long end1 = System.currentTimeMillis();
-        System.out.println("Обрезка: " + ((end1-start1+0.0)/1000) + " сек. ");
 
-        BufferedImage bImageBinarized = IZConverter.convertIZMatrixToBImage(clipedImage);
+        IZProc.adaptiveClip(imageAfterDilation, clipedImage, 70);
+        */
+
+        BufferedImage bImageBinarized = IZConverter.convertIZMatrixToBImage(scaledImage);
         long end = System.currentTimeMillis();
         System.out.println("Фулл обработка: " + ((end-start+0.0)/1000) + " сек.");
 
-        ImageIO.write(bImageBinarized, "PNG", new FileOutputStream(new File("D:/JavaProject(intelegenciya)/NativeImageZ/test/12.png")));
+        ImageIO.write(bImageBinarized, "PNG", new FileOutputStream(new File("D:/JavaProject(intelegenciya)/NativeImageZ/test/13.png")));
         //System.out.println(Arrays.toString(binarizedImage));
         //System.out.println(bImageBinarized.getWidth() + " " + bImageBinarized.getHeight());
     }
