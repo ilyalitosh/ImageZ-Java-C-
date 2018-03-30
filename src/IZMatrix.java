@@ -12,6 +12,12 @@ public class IZMatrix {
         this.height = size.getHeight();
     }
 
+    public IZMatrix(int[] matrix, IZSize size){
+        this.matrix = matrix;
+        this.width = size.getWidth();
+        this.height = size.getHeight();
+    }
+
     public int[] getMatrix(){
         return matrix;
     }
