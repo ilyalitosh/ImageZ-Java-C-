@@ -11,7 +11,7 @@ public class Main {
 
         System.loadLibrary(ImageZ.LIBRARY_NAME);
 
-        BufferedImage fileImage = ImageIO.read(new FileInputStream("D:/JavaProject(intelegenciya)/NativeImageZ/test/6.png"));
+        BufferedImage fileImage = ImageIO.read(new FileInputStream("D:/JavaProject(intelegenciya)/NativeImageZ/test/1_2.png"));
         BufferedImage bImage = new BufferedImage(fileImage.getWidth(), fileImage.getHeight(), BufferedImage.TYPE_BYTE_GRAY);
         Graphics g = bImage.getGraphics();
         Graphics g1 = fileImage.getGraphics();
@@ -23,41 +23,48 @@ public class Main {
 
         IZMatrix imageBinarized = new IZMatrix(new IZSize(imageSrc.getWidth(), imageSrc.getHeight()));
         IZProc.binarize(imageSrc, imageBinarized, IZBinarizationModes.IZ_BRADLEY_ROT, 10,0.05,0,0);
-        long start1 = System.currentTimeMillis();
+        BufferedImage saveImage1 = IZConverter.convertIZMatrixToBImage(imageBinarized);
+        ImageIO.write(saveImage1, "PNG", new FileOutputStream(new File("D:/JavaProject(intelegenciya)/NativeImageZ/test/binarized.png")));
         //IZMatrix scaledImage = IZProc.scale(imageBinarized, 1.0, 1.0, IZType.SCALING_NEAREST_NEIGHBOR);
-        long end1 = System.currentTimeMillis();
-        //System.out.println("Скэйлинг: " + ((end1-start1+0.0)/1000) + " сек. ");
-        IZMatrix imageAfterFilter = new IZMatrix(new IZSize(imageBinarized.getWidth(), imageBinarized.getHeight()));
 
+        //IZMatrix imageAfterFilter = new IZMatrix(new IZSize(imageBinarized.getWidth(), imageBinarized.getHeight()));
         //BufferedImage test2;
         //for(int i = 0; i < 60; i++){
         //    test2 = IZConverter.convertIZMatrixToBImage(imageBinarized);
 
-        IZProc.filter(imageBinarized, imageAfterFilter, IZFilterModes.MEDIAN_FILTER, IZFilterMaskSize.MASK_5x5, IZComputingType.CPU_COMPUTING);
+        //IZProc.filter(imageBinarized, imageAfterFilter, IZFilterModes.MEDIAN_FILTER, IZFilterMaskSize.MASK_5x5, IZComputingType.CPU_COMPUTING);
 
         //    IZMatrix imageSrc1 = IZConverter.convertBImageToIZMatrix(test2);
         //}
 
 
-        IZMatrix imageAfterDilation = new IZMatrix(new IZSize(imageAfterFilter.getWidth(), imageAfterFilter.getHeight()));
+        /*IZMatrix imageAfterDilation = new IZMatrix(new IZSize(imageAfterFilter.getWidth(), imageAfterFilter.getHeight()));
         IZProc.morphology(imageAfterFilter, imageAfterDilation, IZMorphologyModes.DILATION, new IZSize(7,27));
 
         IZMatrix clipedImage = new IZMatrix(new IZSize(imageAfterDilation.getWidth(), imageAfterDilation.getHeight()));
-        IZProc.adaptiveClip(imageAfterDilation, clipedImage, 70);
-
-        IZImageObjects objects = IZProc.findObjects(clipedImage);
+        IZProc.adaptiveClip(imageAfterDilation, clipedImage, 70);*/
+        long start1 = System.currentTimeMillis();
+        IZImageObjects objects = IZProc.findObjects(imageBinarized);
+        long end1 = System.currentTimeMillis();
+        System.out.println("Нахождение образов: " + ((end1-start1+0.0)/1000) + " сек. ");
         g1.setColor(new Color(255, 0 ,0));
         BufferedImage saveImage;
+        System.out.println(objects.count());
         for(int i = 0; i < objects.count(); i++){
             //System.out.println(currentObject.getX() + " " + currentObject.getY() + " " + currentObject.getWidth() + " " + currentObject.getHeight());
-            if(objects.getObjectsList().get(i).getWidth() < 275 && objects.getObjectsList().get(i).getArea() > 1250){
+            //if(objects.getObjectsList().get(i).getWidth() < 275 && objects.getObjectsList().get(i).getArea() > 1250){
                 //g1.drawRect(objects.getObjectsList().get(i).getX(), objects.getObjectsList().get(i).getY(), objects.getObjectsList().get(i).getWidth(), objects.getObjectsList().get(i).getHeight());
                 saveImage = IZConverter.convertIZMatrixToBImage(new IZMatrix(objects.getObjectsList().get(i).getObject(),
                                                                 new IZSize(objects.getObjectsList().get(i).getWidth(), objects.getObjectsList().get(i).getHeight())));
                 ImageIO.write(saveImage, "PNG", new FileOutputStream(new File("D:/JavaProject(intelegenciya)/NativeImageZ/test/10" + i + ".png")));
-            }
+            //}
             //System.out.println("Width: " + objects.getObjectsList().get(i).getWidth() + " Height: " + objects.getObjectsList().get(i).getHeight() + " X: " + objects.getObjectsList().get(i).getX() + " Y: " + objects.getObjectsList().get(i).getY());
         }
+        System.out.println(objects.getObjectsList().get(0).getWidth()
+                + " "
+                + objects.getObjectsList().get(0).getHeight()
+                + " "
+                + objects.getObjectsList().get(0).getArea());
         //System.out.println("Количество образов: " + objects.count() + " " + objects.getType(1) + " Площадь: " + object1.getArea());
 
 

@@ -4,13 +4,11 @@ import java.util.List;
 public class IZImageObjects {
 
     private int[] objectsData;
-    private int[] imagesTypes;
     private List<IZImageObject> objectsList;
     private int count;
 
     public IZImageObjects(int[] objectsData){
         this.objectsData = objectsData;
-        this.imagesTypes = get_objects_types(objectsData);
         this.count = get_objects_count(objectsData);
         objectsList = new ArrayList<>();
         for(int i = 1; i <= this.count; i++){
@@ -20,10 +18,6 @@ public class IZImageObjects {
 
     public int count(){
         return count;
-    }
-
-    public int getType(int i){
-        return imagesTypes[i];
     }
 
     public List<IZImageObject> getObjectsList() {
