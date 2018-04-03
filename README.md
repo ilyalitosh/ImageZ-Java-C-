@@ -31,9 +31,11 @@ System.loadLibrary(ImageZ.LIBRARY_NAME);
 Пример бинаризации с помощью ImageZ:
 ```java
 // загружаем изображение в оттенках серого
-BufferedImage bImage = new BufferedImage(900, 300, BufferedImage.TYPE_BYTE_GRAY);
-Graphics g = bImage.getGraphics();
 BufferedImage fileImage = ImageIO.read(new FileInputStream("src/test/test.png"));
+BufferedImage bImage = new BufferedImage(fileImage.getWidth(),
+                                          fileImage.getHeight(),
+                                          BufferedImage.TYPE_BYTE_GRAY);
+Graphics g = bImage.getGraphics();
 g.drawImage(fileImage, 0, 0, null);
 
 // преобразуем картинку в IZMatrix
