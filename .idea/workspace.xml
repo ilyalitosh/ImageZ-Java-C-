@@ -7,12 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd679c16-94f0-4a6f-9f1e-b619de3d2e83" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/8.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x64/ImageZ.dll" afterPath="$PROJECT_DIR$/native/x64/ImageZ.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x64/ImageZ.exp" afterPath="$PROJECT_DIR$/native/x64/ImageZ.exp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x64/ImageZ.lib" afterPath="$PROJECT_DIR$/native/x64/ImageZ.lib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x64/ImageZ.pdb" afterPath="$PROJECT_DIR$/native/x64/ImageZ.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x86/ImageZ.dll" afterPath="$PROJECT_DIR$/native/x86/ImageZ.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x86/ImageZ.exp" afterPath="$PROJECT_DIR$/native/x86/ImageZ.exp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x86/ImageZ.lib" afterPath="$PROJECT_DIR$/native/x86/ImageZ.lib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/native/x86/ImageZ.pdb" afterPath="$PROJECT_DIR$/native/x86/ImageZ.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NativeImageZ/IZImageObject.class" afterPath="$PROJECT_DIR$/out/production/NativeImageZ/IZImageObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NativeImageZ/IZMatrix.class" afterPath="$PROJECT_DIR$/out/production/NativeImageZ/IZMatrix.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NativeImageZ/IZImageObjects.class" afterPath="$PROJECT_DIR$/out/production/NativeImageZ/IZImageObjects.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NativeImageZ/Main.class" afterPath="$PROJECT_DIR$/out/production/NativeImageZ/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IZImageObjects.java" afterPath="$PROJECT_DIR$/src/IZImageObjects.java" />
@@ -31,31 +36,11 @@
       <file leaf-file-name="IZProc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IZProc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="88" column="66" lean-forward="false" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+            <state relative-caret-position="17">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IZMatrix.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IZMatrix.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IZConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IZConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="124" lean-forward="false" selection-start-line="29" selection-start-column="124" selection-end-line="29" selection-end-column="124" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -63,20 +48,8 @@
       <file leaf-file-name="IZImageObjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IZImageObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IZImageObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IZImageObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -95,8 +68,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="119" lean-forward="false" selection-start-line="13" selection-start-column="119" selection-end-line="13" selection-end-column="119" />
+            <state relative-caret-position="323">
+              <caret line="87" column="18" lean-forward="true" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -182,10 +155,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="1" />
-    <option name="width" value="524" />
-    <option name="height" value="866" />
+    <option name="x" value="770" />
+    <option name="y" value="3" />
+    <option name="width" value="499" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -214,7 +187,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,7 +205,7 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522410844979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="корректировки в поиске образов - 2">
+      <created>1522774758528</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522774758528</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -454,7 +434,8 @@
     <MESSAGE value="добавлена адаптивная обрезка" />
     <MESSAGE value="добавлено масштабирование" />
     <MESSAGE value="корректировки в поиске образов" />
-    <option name="LAST_COMMIT_MESSAGE" value="корректировки в поиске образов" />
+    <MESSAGE value="корректировки в поиске образов - 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="корректировки в поиске образов - 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -463,8 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/native/IZProc.class" />
-    <entry file="file://$PROJECT_DIR$/hs_err_pid2144.log" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/java/awt/Color.class" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/java/io/FileInputStream.class" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/javafx-src.zip!/com/sun/prism/paint/Color.java" />
@@ -602,14 +581,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hs_err_pid5324.log" />
     <entry file="file://$PROJECT_DIR$/hs_err_pid10228.log" />
-    <entry file="file://$PROJECT_DIR$/src/ImageZ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IZMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -618,36 +589,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid11432.log" />
     <entry file="file://$PROJECT_DIR$/src/IZConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="124" lean-forward="false" selection-start-line="29" selection-start-column="124" selection-end-line="29" selection-end-column="124" />
+        <state relative-caret-position="238">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid11432.log">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/java/awt/Component.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="238">
+          <caret line="4567" column="23" lean-forward="false" selection-start-line="4567" selection-start-column="23" selection-end-line="4567" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/java/util/LinkedList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="181" column="19" lean-forward="false" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IZProc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="88" column="66" lean-forward="false" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+        <state relative-caret-position="17">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IZImageObject.java">
+    <entry file="file://$PROJECT_DIR$/src/ImageZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="68">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -660,20 +640,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IZImageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/IZImageObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="119" lean-forward="false" selection-start-line="13" selection-start-column="119" selection-end-line="13" selection-end-column="119" />
+        <state relative-caret-position="323">
+          <caret line="87" column="18" lean-forward="true" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
           <folding />
         </state>
       </provider>

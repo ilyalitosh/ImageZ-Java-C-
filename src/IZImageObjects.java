@@ -1,27 +1,48 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
-public class IZImageObjects {
-
-    private int[] objectsData;
-    private List<IZImageObject> objectsList;
-    private int count;
+public class IZImageObjects extends LinkedList<IZImageObject> {
 
     public IZImageObjects(int[] objectsData){
-        this.objectsData = objectsData;
-        this.count = get_objects_count(objectsData);
-        objectsList = new ArrayList<>();
-        for(int i = 1; i <= this.count; i++){
-            objectsList.add(new IZImageObject(get_object_data(objectsData, i)));
+        int count = get_objects_count(objectsData);
+        for(int i = 1; i <= count; i++){
+            add(new IZImageObject(get_object_data(objectsData, i)));
         }
     }
 
-    public int count(){
-        return count;
+    public IZImageObjects(){
+
     }
 
-    public List<IZImageObject> getObjectsList() {
-        return objectsList;
+    /**
+     * сортировка по возрастанию по координате X
+     *
+     * */
+    public void sortAsc(){
+        for(int i = size() - 1; i > 0; i--){
+            for(int j = 0; j < i; j++){
+                if(get(j).getX() > get(j + 1).getX()){
+                    IZImageObject buffer = get(j);
+                    set(j, get(j + 1));
+                    set(j + 1, buffer);
+                }
+            }
+        }
+    }
+
+    /**
+     * сортировка по убыванию по координате X
+     *
+     * */
+    public void sortDes(){
+        for(int i = size() - 1; i > 0; i--){
+            for(int j = 0; j < i; j++){
+                if(get(j).getX() < get(j + 1).getX()){
+                    IZImageObject buffer = get(j + 1);
+                    set(j + 1, get(j));
+                    set(j, buffer);
+                }
+            }
+        }
     }
 
     // C++: определение кол-ва найденных образов
